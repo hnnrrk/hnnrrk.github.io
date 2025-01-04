@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday, Dad!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <div id="open" class="card-container">
+    <div class="card">
+      <div class="card-panel card-panel-front">
+        <a href="#open">
+          <img
+            class="card-panel-image"
+            src="./card-front.png"
+            alt="Happy 81st Birthday, Dad!"
+          />
+        </a>
+      </div>
+
+      <div class="card-panel card-panel-inside-left">
+      </div>
+
+      <div class="card-panel card-panel-inside-right">
+        <p>
+          Hoppin' by to wish you a big<br/>
+          <span style="font-size:1.5em; color: rgb(82, 163, 102)">Happy Birthday!</span>
+        </p>
+
+        <a href="#modal" class="button">
+          <img src="./play-video.png" alt="Open video" style="width: 60%; border-radius: 0.75rem; box-shadow: 0 1px 3px 0px #0007;" />
+        </a>
+
+        <p class="from">
+          Cheers,
+          <br />
+          &nbsp;&nbsp; Henrik &amp; Emily
+          <br />
+          <span style="font-size: .7em; text-transform: uppercase;">(P.S.: Have a pie or pizza on us!)</span>
+        </p>
+
+        <a href="https://westpac.com.au" target="_blank" style="width: 40%; place-self: end;">
+          <img src="./andrews-gift-card.png" alt="$75 gift card for Andrews" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal-container">
+    <div class="modal-inner">
+      <a href="#" class="modal-close" aria-label="Close modal">&times;</a>
+
+      <video width="800" height="450" controls fullscreen>
+        <source src="./video.mp4" type="video/mp4">
+        Happy Birthday, Dad!
+      </video>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
