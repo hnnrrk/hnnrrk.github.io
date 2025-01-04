@@ -140,6 +140,7 @@ img {
 
 .modal-inner video {
   display: flex;
+  max-width: 90vw;
 }
 
 .modal-close {
