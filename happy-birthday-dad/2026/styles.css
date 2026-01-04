@@ -1,0 +1,117 @@
+body {
+  background: #edd1a9;
+  color: #333;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  text-align: center;
+}
+
+.card-container {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1400px;
+  transition: all 0.2s ease;
+}
+
+.card {
+  height: min(80vh, 80vw);
+  aspect-ratio: 3/4;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  box-shadow: 0 5px 10px 1px #0002;
+  transform: rotateX(30deg) rotateY(20deg) rotateZ(5deg);
+}
+
+.card:hover {
+  transform: rotate(0deg)
+}
+
+.card-panel {
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: all 1s ease;
+  backface-visibility: visible;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: rotate3d(0, 1, 0, 0deg);
+}
+
+img {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.card-panel-front {
+  backface-visibility: hidden;
+  background: #fff;
+  z-index: 1;
+  padding: 1em;
+}
+
+.card-panel-inside-left {
+  background: #fff;
+  z-index: 0;
+}
+
+.card-panel-inside-right {
+  align-self: start;
+  border-left: none;
+  background: #fff;
+  z-index: -1;
+  overflow: hidden;
+  padding: 1em;
+  font-size: min(3.5cqw, 3.5cqh);
+  line-height: 1.2;
+}
+
+.message {
+  color: #222;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 1.25em;
+}
+
+.message img {
+  max-width: 55%;
+  display: inline-block;
+}
+
+.message a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.handwritten {
+  color: #3c3f93;
+  text-align: left;
+  place-self: end;
+  font-family: "Shadows Into Light", cursive;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* open card */
+.card-container:target .card {
+  transform: rotateX(0deg) scale(1.2);
+}
+
+.card-container:target .card-panel-front {
+  transform: rotate3d(0, 1, 0, -160deg);
+}
+
+.card-container:target .card-panel-inside-left {
+  transform: rotate3d(0, 1, 0, -160deg);
+}
